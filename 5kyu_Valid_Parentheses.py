@@ -26,7 +26,7 @@ def valid_parentheses(string):
     string = re.sub(r"[^()]+", "", string)  # remove any other characters
     while "()" in string:
         string = string.replace("()", "")
-    return True if len(string) == 0 else False
+    return len(string) == 0
 
 
 print(valid_parentheses("hi(hi)()"))
